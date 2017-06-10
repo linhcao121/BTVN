@@ -5,15 +5,58 @@
 <body>
 <p>Projected by truong1. Thanks for github to helping me</p>
 <a href="https://facebook.com">Set new facebook account</a>
-<h2>SET NEW ACCOUNT</h2>
-<h4>Free and always free</h4>
+##SET NEW ACCOUNT
+**_Free and always free_**
+<script>
+function checkinformation(){
+var a = document.forms["create"]["fname"].value;
+if (a == "") {
+        alert("làm ơn điền tên!");
+        return false;
+		}
+var b = document.forms["create"]["lname"].value;
+if (b == "") {
+        alert("làm ơn điền họ! ");
+        return false;
+		}
+var c = document.forms["create"]["sdtoremail"].value;
+ if (c == "") {
+        alert("làm ơn điền số điện thoại hoặc Email!");
+        return false;
+		}
+var d = document.forms["create"]["bday"].value;
+if (d ==""){
+		alert("làm ơn chọn ngày sinh!");
+		return false;
+	}
+var e = document.forms["create"]["bmonth"].value;
+if (e ==""){
+		alert("làm ơn chọn tháng sinh!");
+		return false;
+	}
+var f = document.forms["create"]["byear"].value;
+if (f ==""){
+		alert("làm ơn chọn năm sinh!");
+		return false;
+	}
+var g = document.forms["create"]["gender"].value;
+if (g ==""){
+		alert("làm ơn chọn giới tính!")
+		return false;
+	}
+var h = document.forms["create"]["password"].value;
+if (h == "")
+		alert("là ơn điền mật khẩu!");
+		return false;
+}
+</script>
  
-<form name="reg" id="reg" onsubmit="setaccount()">
-	<input type="text" name="fname" placeholder="First and Middle name">
-	<input type="text" name="lname" placeholder="Last name"><br><br>
-	<input type="text" name="emailophone" placeholder="Phone number or email"><br><br>
-	<input type="password" name="password" placeholder="New password"><br><br>
-	Your birthday:<br><br>
+<form>
+	<input type="text" name="fname" placeholder="First and Middle name" style="width: 150px; height: 25px">
+	<input type="text" name="lname" placeholder="Last name" style="width: 150px; height: 25px"><br><br>
+	<input type="text" name="emailophone" placeholder="Phone number or email" style="width: 300px; height: 25px"><br><br>
+	<input type="password" name="password" placeholder="New password" style="width: 300px; height: 25px"><br><br>
+	#Your birthday:<br><br>
 	<select>
 	<option value="day">Day</option>
 	<option value="1">1</option>
@@ -128,52 +171,7 @@
 </select><br><br>
 	<input type="radio" name="gender" value="male"> Male
 	<input type="radio" name="gender" value="female"> Female<br>
-	<input type="submit" value="SET ACCOUNT">
-	<p id="setaccount"></p>
-	<script>
-	function setaccount() {
-	var fname = document.forms[reg][' fname '].value;
-    	var lname = document.forms[reg][' lname '].value;
-    	var emailophone = document.forms[reg][' emailophone '].value;
-    	var password = document.forms[reg][' password '].value;
-        var day = document.forms[reg][' day '].value;
-    	var month = document.forms[reg][' month '].value;
-    	var year = document.forms[reg][' year '].value;
-        var gender = document.forms[reg][' gender '].value;
-	var tfname = "";
-	var tlname = "You must fill your last name";
-	var temailophone = "You must fill your email or your phone number";
-	var tpassword = "You must fill your password";
-	var tday = "You must choose your birthday";
-	var tmonth = "You must choose your birthday";
-	var tyear = "You must choose your birthday";
-	var success = 1;
-	if ( fname === "" ) {
-	alert("You must fill your first name");
-	success = 0 ;
-	} else if ( lname === "" ) {
-	alert("You must fill your last name");
-	success = 0 ;
-	} else if ( emailophone === "" ) {
-	alert("You must fill your email or your phone number");
-	success = 0 ;
-	} else if ( password === "" ) {
-	alert("You must fill your password");
-	success = 0 ;
-	} else if ( day === "" ) {
-	alert("You must choose your birthday");
-	success = 0 ;
-	} else if ( month === "" ) {
-	alert("You must choose your birthday");
-	success = 0 ;
-	} else if ( year === "" ) {
-	alert("You must choose your birthday") ;
-	success = 0 ;
-	} 
-	if (success === 0) {
-        document.getElementById("setaccount").innerHTML = "You must fill all required field";
-    	}
-	</script>
+	<input id="submit" type="SET ACCOUNT" name=" SET ACCOUNT" value=" SET ACCOUNT">
 	
 </form>
 </body>
